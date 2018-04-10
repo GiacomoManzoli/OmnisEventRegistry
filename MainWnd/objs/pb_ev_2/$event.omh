@@ -1,0 +1,4 @@
+On evClick     ;; Event Parameters - pRow( Itemreference )
+	Calculate iCountEv2 as iCountEv2+1
+	Calculate data as row(iCountEv2)
+	Do ioMain.$notifiyEvent('evEvent2',data)

@@ -1,0 +1,4 @@
+
+Do iRefArea2.$classname.$assign('')
+Do iRefArea2.$classname.$assign('Subscribers.swnd_b_alt')
+Do iRefArea2.$setParams(ioMain.$ref)

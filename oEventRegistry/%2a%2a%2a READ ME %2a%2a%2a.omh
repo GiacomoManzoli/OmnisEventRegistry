@@ -1,0 +1,32 @@
+;  Autore: Giacomo Manzoli
+;  Data: 2018.04.10
+;  Descrizione: Oggetto che permette la propagazione di eventi senza l'utilizzo di riferimenti diretti
+;
+;  Per registrarsi agli eventi gli oggetti devono chiamare il metodo:
+;
+;  Do refEventRegistry.$addSubscriber(pSubscriberName,pRef, pHandlerName,pEventList)
+;
+;  Dove:
+;  - 'pSubscriberName' è una stringa che identifica l'oggetto (serve per il $removeSubscriber)
+;  - 'pRef' è il riferimento all'oggetto che deve essere notificato dell'evento, tipicamente è $cinst
+;  - 'pHandlerName' nome del metodo da chiamare quando si verifica l'evento
+;  - 'pEventList' lista con una sola colonna, 'evName', che specifica quali eventi devono essere notificati.
+;
+;  Da notare che una volta registrato, l'oggetto deve rimuoversi prima della distruzione!
+
+
+;  Esempio di utilizzo:
+;  Do eventList.$define(evName)
+;  Do eventList.$add('evEvent2')
+;  Do iRefMainObject.$registerSubscriber(iInstanceName,$cinst,'$handleEvents',eventList)
+
+;  metodo $handleEvents dello stesso oggetto:
+;
+;  * pEvent Char 1000
+;  * pData FieldRef
+;  Switch pEventName
+;  Case 'evEvent2'
+;  Calculate evData as pData
+;  Do iList.$add(con('Evento 2: (counter: ',evData.C1,')'))
+;  End Switch
+;  Do iRefHlEventi.$redraw(kTrue,kTrue)

@@ -1,0 +1,6 @@
+
+Switch pEventName
+	Case 'evEvent1'
+		Do iList.$add('Si è verificato l''evento 1')
+End Switch
+Do iRefHlEventi.$redraw(kTrue,kTrue)

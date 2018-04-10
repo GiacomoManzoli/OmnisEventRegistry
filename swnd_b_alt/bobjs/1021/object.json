@@ -1,0 +1,27 @@
+{
+	"ident": 1021,
+	"order": 16386,
+	"objtype": "kLabel",
+	"properties": {
+		"align": "kLeftJst",
+		"backcolor": "kColorBackFill",
+		"backpattern": 15,
+		"designactive": true,
+		"edgefloat": "kEFnone",
+		"fieldstyle": "CtrlLabel",
+		"font": 3,
+		"fontsize": 0,
+		"fontstyle": "kPlain",
+		"forecolor": "kColorForeFill",
+		"height": 19,
+		"left": 9,
+		"objlink": 2,
+		"text": "registrata solo ad evEvent1",
+		"textcolor": "kColorWindowText",
+		"top": 26,
+		"userinfo": "",
+		"vertcentertext": false,
+		"visible": true,
+		"width": 265
+	}
+}

@@ -1,0 +1,5 @@
+;  Enter your initialization code here
+Calculate iInstanceName as 'SubWndA'
+Do iList.$define(col1)
+
+Set reference iRefHlEventi to $cinst.$objs.hl_eventi

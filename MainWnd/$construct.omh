@@ -1,0 +1,14 @@
+;  Enter your initialization code here
+Set reference iRefArea1 to $cinst.$objs.area1
+Set reference iRefArea2 to $cinst.$objs.area2
+Set reference iRefArea3 to $cinst.$objs.area3
+
+
+Do iRefArea1.$classname.$assign('Subscribers.swnd_a')
+Do iRefArea1.$setParams(ioMain.$ref)
+
+Do iRefArea2.$classname.$assign('Subscribers.swnd_b')
+Do iRefArea2.$setParams(ioMain.$ref)
+
+Do iRefArea3.$classname.$assign('Subscribers.swnd_c')
+Do iRefArea3.$setParams(ioMain.$ref)

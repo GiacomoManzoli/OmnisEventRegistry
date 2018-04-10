@@ -1,0 +1,16 @@
+;  Descrizione: Notifica l'evento pEvName a tutti i subscriber interessati usando i dati presenti in pEvData.
+;  Parametri:
+;  - pEvName: Nome dell'evento da notificare
+;  - pEvData: FiledRef (idealmente ad una row) con i dati da passare ai subscriber
+;
+Calculate lData as pEvData
+;
+For iListSubscribers.$line from 1 to iListSubscribers.$linecount step 1
+	;  Per ogni subscriber cerca se l'evento corrente è interessante
+	Do iListSubscribers.events.$search($ref.evName=pEvName,kTrue,kFalse,kFalse,kFalse) Returns found
+	If found
+		;  Se l'evento corrente è interessante, invoca il metodo
+		Calculate handlerName as iListSubscribers.handler
+		Do iListSubscribers.reference.[handlerName](pEvName,lData)
+	End If
+End For

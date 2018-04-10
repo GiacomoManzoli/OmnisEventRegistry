@@ -1,0 +1,7 @@
+;  Cerca il nome nella lista e lo rimuove
+Do iListSubscribers.$search($ref.name=pName,kTrue,kFalse,kFalse,kFalse) Returns found
+If found
+	Do iListSubscribers.$remove(found)
+End If
+
+Quit method

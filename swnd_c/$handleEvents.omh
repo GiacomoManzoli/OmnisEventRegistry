@@ -1,0 +1,7 @@
+
+Switch pEventName
+	Case 'evEvent2'
+		Calculate evData as pData
+		Do iList.$add(con('Evento 2: (counter: ',evData.C1,')'))
+End Switch
+Do iRefHlEventi.$redraw(kTrue,kTrue)

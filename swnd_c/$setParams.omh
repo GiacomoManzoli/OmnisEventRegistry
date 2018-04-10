@@ -1,0 +1,6 @@
+Set reference iRefMainObject to pRefMainObject.$ref
+
+Do eventList.$define(evName)
+Do eventList.$add('evEvent2')
+
+Do iRefMainObject.$addSubscriber(iInstanceName,$cinst,'$handleEvents',eventList)
